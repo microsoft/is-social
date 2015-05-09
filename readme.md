@@ -5,9 +5,9 @@ This provides utilities for validating and parsing social media links, with love
 ```js
 var is = require('is-social').is;
 
-is.twitter.profile.url('https://twitter.com/ConnorPeet'); // => true
-// Some linters want to make sure that you actually have an operative
-// expression. In that case, you can end with .url();
+is.twitter.profile('https://twitter.com/ConnorPeet'); // => true
+is.twitter.handle('@ConnorPeet'); // => true
+// see more usage below
 ```
 
 ## API
