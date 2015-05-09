@@ -1,6 +1,6 @@
 {
   "name": "is-social",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Validators for social media profiles.",
   "main": "index.js",
   "scripts": {
