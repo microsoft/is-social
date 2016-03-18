@@ -1,4 +1,4 @@
-# is-social [![Build Status](https://img.shields.io/travis/MCProHosting/is-social.svg?style=flat-square)](https://travis-ci.org/MCProHosting/is-social) [![](https://img.shields.io/coveralls/MCProHosting/is-social.svg?style=flat-square)](https://coveralls.io/r/MCProHosting/is-social)
+# is-social [![Build Status](https://img.shields.io/travis/WatchBeam/is-social.svg?style=flat-square)](https://travis-ci.org/WatchBeam/is-social) [![](https://img.shields.io/coveralls/MCProHosting/is-social.svg?style=flat-square)](https://coveralls.io/r/MCProHosting/is-social)
 
 This provides utilities for validating and parsing social media links, with lovely BDD-style assertions.
 
