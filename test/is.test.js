@@ -108,6 +108,106 @@ describe('`is`', function () {
             checkThat: 'https://youtube.come/qwerty',
             is: false
         },
+        'checks valid steam id': {
+            fn: 'steam.id',
+            checkThat: '12345678901234567',
+            is: true
+        },
+        'checks invalid steam id': {
+            fn: 'steam.id',
+            checkThat: 'qwert.y',
+            is: false
+        },
+        'checks valid steam profile': {
+            fn: 'steam.profile',
+            checkThat: 'https://steamcommunity.com/profiles/12345678901234567',
+            is: true
+        },
+        'checks invalid steam profile': {
+            fn: 'steam.profile',
+            checkThat: 'https://steamcommunity.com/profiles/qwerty',
+            is: false
+        },
+        'checks valid instagram name': {
+            fn: 'instagram.name',
+            checkThat: 'qwerty',
+            is: true
+        },
+        'checks invalid instagram name': {
+            fn: 'instagram.name',
+            checkThat: 'qwert.y',
+            is: false
+        },
+        'checks valid instagram url': {
+            fn: 'instagram.url',
+            checkThat: 'https://instagram.com/qwerty',
+            is: true
+        },
+        'checks invalid instagram url': {
+            fn: 'instagram.url',
+            checkThat: 'https://instagram.com/qwert.y',
+            is: false
+        },
+        'checks valid soundcloud name': {
+            fn: 'soundcloud.name',
+            checkThat: 'qwerty',
+            is: true
+        },
+        'checks invalid soundcloud name': {
+            fn: 'soundcloud.name',
+            checkThat: 'qwert.y',
+            is: false
+        },
+        'checks valid soundcloud url': {
+            fn: 'soundcloud.url',
+            checkThat: 'https://soundcloud.com/qwerty',
+            is: true
+        },
+        'checks invalid soundcloud url': {
+            fn: 'soundcloud.url',
+            checkThat: 'https://soundcloud.come/qwerty',
+            is: false
+        },
+        'checks valid spreadshirt name': {
+            fn: 'spreadshirt.name',
+            checkThat: 'qwerty',
+            is: true
+        },
+        'checks invalid spreadshirt name': {
+            fn: 'spreadshirt.name',
+            checkThat: 'qwert.y',
+            is: false
+        },
+        'checks valid spreadshirt url': {
+            fn: 'spreadshirt.url',
+            checkThat: 'https://spreadshirt.com/user/qwerty',
+            is: true
+        },
+        'checks invalid spreadshirt url': {
+            fn: 'spreadshirt.url',
+            checkThat: 'https://spreadshirt.com/qwerty',
+            is: false
+        },
+        'checks valid patreon name': {
+            fn: 'patreon.name',
+            checkThat: 'qwerty',
+            is: true
+        },
+        'checks invalid patreon name': {
+            fn: 'patreon.name',
+            checkThat: 'qwert.y',
+            is: false
+        },
+        'checks valid patreon url': {
+            fn: 'patreon.url',
+            checkThat: 'https://patreon.com/qwerty',
+            is: true
+        },
+        'checks invalid patreon url': {
+            fn: 'patreon.url',
+            checkThat: 'https://patreon.come/qwerty',
+            is: false
+        },
     };
 
     Object.keys(test).forEach(function (t) {
