@@ -115,7 +115,17 @@ describe('`is`', function () {
         },
         'checks invalid steam id': {
             fn: 'steam.id',
-            checkThat: 'qwert.y',
+            checkThat: 'o',
+            is: false
+        },
+        'checks valid steam id': {
+            fn: 'steam.name',
+            checkThat: 'abcdefg123',
+            is: true
+        },
+        'checks invalid steam id': {
+            fn: 'steam.name',
+            checkThat: 'x',
             is: false
         },
         'checks valid steam profile': {
@@ -125,7 +135,17 @@ describe('`is`', function () {
         },
         'checks invalid steam profile': {
             fn: 'steam.profile',
-            checkThat: 'https://steamcommunity.com/profiles/qwerty',
+            checkThat: 'https://steamcommunity.com/profiles/',
+            is: false
+        },
+        'checks valid steam id': {
+            fn: 'steam.profile',
+            checkThat: 'https://steamcommunity.com/id/abcdefgh123',
+            is: true
+        },
+        'checks invalid steam id': {
+            fn: 'steam.profile',
+            checkThat: 'https://steamcommunity.com/id/',
             is: false
         },
         'checks valid instagram name': {
