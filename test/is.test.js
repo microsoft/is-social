@@ -108,34 +108,34 @@ describe('`is`', function () {
             checkThat: 'https://youtube.come/qwerty',
             is: false
         },
-        'checks valid steam id': {
+        'checks valid steam profile id': {
             fn: 'steam.id',
-            checkThat: '12345678901234567',
+            checkThat: 'abcdefgh123',
             is: true
         },
-        'checks invalid steam id': {
+        'checks invalid steam profile id': {
             fn: 'steam.id',
-            checkThat: 'o',
+            checkThat: ' ',
             is: false
         },
-        'checks valid steam id': {
-            fn: 'steam.name',
-            checkThat: 'abcdefg123',
+        'checks valid steam 64 bit id': {
+            fn: 'steam.64bitname',
+            checkThat: '1234567890123456',
             is: true
         },
-        'checks invalid steam id': {
-            fn: 'steam.name',
+        'checks invalid steam 64 bit id': {
+            fn: 'steam.64bitname',
             checkThat: 'x',
             is: false
         },
         'checks valid steam profile': {
-            fn: 'steam.profile',
-            checkThat: 'https://steamcommunity.com/profiles/12345678901234567',
+            fn: 'steam.64bit',
+            checkThat: 'https://steamcommunity.com/profiles/1234567890123456',
             is: true
         },
         'checks invalid steam profile': {
-            fn: 'steam.profile',
-            checkThat: 'https://steamcommunity.com/profiles/',
+            fn: 'steam.64bit',
+            checkThat: 'https://steamcommunity.com/profiles/abcdefgh123',
             is: false
         },
         'checks valid steam id': {
