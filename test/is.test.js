@@ -109,42 +109,42 @@ describe('`is`', function () {
             is: false
         },
         'checks valid steam profile name': {
-            fn: 'steam.id',
+            fn: 'steam.name',
             checkThat: 'abcdefgh123',
             is: true
         },
         'checks invalid steam profile name': {
-            fn: 'steam.id',
+            fn: 'steam.name',
             checkThat: ' ',
             is: false
         },
         'checks valid steam profile id': {
-            fn: 'steam.64bitname',
+            fn: 'steam.id',
             checkThat: '1234567890123456',
             is: true
         },
         'checks invalid steam profile id': {
-            fn: 'steam.64bitname',
+            fn: 'steam.id',
             checkThat: 'x',
             is: false
         },
         'checks valid steam profile id': {
-            fn: 'steam.64bit',
+            fn: 'steam.accountId',
             checkThat: 'https://steamcommunity.com/profiles/1234567890123456',
             is: true
         },
         'checks invalid steam profile id': {
-            fn: 'steam.64bit',
+            fn: 'steam.accountId',
             checkThat: 'https://steamcommunity.com/profiles/abcdefgh123',
             is: false
         },
         'checks valid steam name': {
-            fn: 'steam.profile',
+            fn: 'steam.accountName',
             checkThat: 'https://steamcommunity.com/id/abcdefgh123',
             is: true
         },
         'checks invalid steam name': {
-            fn: 'steam.profile',
+            fn: 'steam.accountName',
             checkThat: 'https://steamcommunity.com/id/',
             is: false
         },
