@@ -108,24 +108,44 @@ describe('`is`', function () {
             checkThat: 'https://youtube.come/qwerty',
             is: false
         },
-        'checks valid steam id': {
-            fn: 'steam.id',
-            checkThat: '12345678901234567',
+        'checks valid steam profile name': {
+            fn: 'steam.name',
+            checkThat: 'abcdefgh123',
             is: true
         },
-        'checks invalid steam id': {
-            fn: 'steam.id',
-            checkThat: 'qwert.y',
+        'checks invalid steam profile name': {
+            fn: 'steam.name',
+            checkThat: ' ',
             is: false
         },
-        'checks valid steam profile': {
-            fn: 'steam.profile',
-            checkThat: 'https://steamcommunity.com/profiles/12345678901234567',
+        'checks valid steam profile id': {
+            fn: 'steam.id',
+            checkThat: '1234567890123456',
             is: true
         },
-        'checks invalid steam profile': {
-            fn: 'steam.profile',
-            checkThat: 'https://steamcommunity.com/profiles/qwerty',
+        'checks invalid steam profile id': {
+            fn: 'steam.id',
+            checkThat: 'x',
+            is: false
+        },
+        'checks valid steam profile id': {
+            fn: 'steam.profileUrl',
+            checkThat: 'https://steamcommunity.com/profiles/1234567890123456',
+            is: true
+        },
+        'checks invalid steam profile id': {
+            fn: 'steam.profileUrl',
+            checkThat: 'https://steamcommunity.com/profiles/abcdefgh123',
+            is: false
+        },
+        'checks valid steam name': {
+            fn: 'steam.customUrl',
+            checkThat: 'https://steamcommunity.com/id/abcdefgh123',
+            is: true
+        },
+        'checks invalid steam name': {
+            fn: 'steam.customUrl',
+            checkThat: 'https://steamcommunity.com/id/',
             is: false
         },
         'checks valid instagram name': {
