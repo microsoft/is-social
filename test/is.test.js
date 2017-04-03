@@ -129,22 +129,22 @@ describe('`is`', function () {
             is: false
         },
         'checks valid steam profile id': {
-            fn: 'steam.accountId',
+            fn: 'steam.profileUrl',
             checkThat: 'https://steamcommunity.com/profiles/1234567890123456',
             is: true
         },
         'checks invalid steam profile id': {
-            fn: 'steam.accountId',
+            fn: 'steam.profileUrl',
             checkThat: 'https://steamcommunity.com/profiles/abcdefgh123',
             is: false
         },
         'checks valid steam name': {
-            fn: 'steam.accountName',
+            fn: 'steam.customUrl',
             checkThat: 'https://steamcommunity.com/id/abcdefgh123',
             is: true
         },
         'checks invalid steam name': {
-            fn: 'steam.accountName',
+            fn: 'steam.customUrl',
             checkThat: 'https://steamcommunity.com/id/',
             is: false
         },
