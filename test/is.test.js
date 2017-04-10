@@ -133,6 +133,11 @@ describe('`is`', function () {
             checkThat: 'https://steamcommunity.com/profiles/1234567890123456',
             is: true
         },
+        'checks valid steam profile id with trailing slash': {
+            fn: 'steam.profileUrl',
+            checkThat: 'https://steamcommunity.com/profiles/1234567890123456/',
+            is: true
+        },
         'checks invalid steam profile id': {
             fn: 'steam.profileUrl',
             checkThat: 'https://steamcommunity.com/profiles/abcdefgh123',
@@ -141,6 +146,11 @@ describe('`is`', function () {
         'checks valid steam name': {
             fn: 'steam.customUrl',
             checkThat: 'https://steamcommunity.com/id/abcdefgh123',
+            is: true
+        },
+        'checks valid steam name with trailing slash': {
+            fn: 'steam.customUrl',
+            checkThat: 'https://steamcommunity.com/id/abcdefgh123/',
             is: true
         },
         'checks invalid steam name': {
