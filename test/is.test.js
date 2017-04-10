@@ -63,6 +63,11 @@ describe('`is`', function () {
             checkThat: 'https://facebook.com/connor.peet',
             is: true
         },
+        'checks valid facebook url with trailing slash': {
+            fn: 'facebook.profile',
+            checkThat: 'https://facebook.com/connor.peet/',
+            is: true
+        },
         'checks invalid facebook url': {
             fn: 'facebook.profile',
             checkThat: 'https://facebook.com/connor_peet',
@@ -83,6 +88,11 @@ describe('`is`', function () {
             checkThat: 'https://player.me/connor',
             is: true
         },
+        'checks valid player url with trailing slash': {
+            fn: 'player.url',
+            checkThat: 'https://player.me/connor/',
+            is: true
+        },
         'checks invalid player url': {
             fn: 'player.url',
             checkThat: 'https://player.me/c',
@@ -101,6 +111,11 @@ describe('`is`', function () {
         'checks valid youtube url': {
             fn: 'youtube.url',
             checkThat: 'https://youtube.com/user/qwerty',
+            is: true
+        },
+        'checks valid youtube url with trailing slash': {
+            fn: 'youtube.url',
+            checkThat: 'https://youtube.com/user/qwerty/',
             is: true
         },
         'checks invalid youtube url': {
@@ -133,6 +148,11 @@ describe('`is`', function () {
             checkThat: 'https://steamcommunity.com/profiles/1234567890123456',
             is: true
         },
+        'checks valid steam profile id with trailing slash': {
+            fn: 'steam.profileUrl',
+            checkThat: 'https://steamcommunity.com/profiles/1234567890123456/',
+            is: true
+        },
         'checks invalid steam profile id': {
             fn: 'steam.profileUrl',
             checkThat: 'https://steamcommunity.com/profiles/abcdefgh123',
@@ -141,6 +161,11 @@ describe('`is`', function () {
         'checks valid steam name': {
             fn: 'steam.customUrl',
             checkThat: 'https://steamcommunity.com/id/abcdefgh123',
+            is: true
+        },
+        'checks valid steam name with trailing slash': {
+            fn: 'steam.customUrl',
+            checkThat: 'https://steamcommunity.com/id/abcdefgh123/',
             is: true
         },
         'checks invalid steam name': {
@@ -163,6 +188,11 @@ describe('`is`', function () {
             checkThat: 'https://instagram.com/qwerty',
             is: true
         },
+        'checks valid instagram url with trailing slash': {
+            fn: 'instagram.url',
+            checkThat: 'https://instagram.com/qwerty/',
+            is: true
+        },
         'checks invalid instagram url': {
             fn: 'instagram.url',
             checkThat: 'https://instagram.com/qwert.y',
@@ -181,6 +211,11 @@ describe('`is`', function () {
         'checks valid soundcloud url': {
             fn: 'soundcloud.url',
             checkThat: 'https://soundcloud.com/qwerty',
+            is: true
+        },
+        'checks valid soundcloud url with trailing slash': {
+            fn: 'soundcloud.url',
+            checkThat: 'https://soundcloud.com/qwerty/',
             is: true
         },
         'checks invalid soundcloud url': {
@@ -203,6 +238,11 @@ describe('`is`', function () {
             checkThat: 'https://spreadshirt.com/user/qwerty',
             is: true
         },
+        'checks valid spreadshirt url with trailing slash': {
+            fn: 'spreadshirt.url',
+            checkThat: 'https://spreadshirt.com/user/qwerty/',
+            is: true
+        },
         'checks invalid spreadshirt url': {
             fn: 'spreadshirt.url',
             checkThat: 'https://spreadshirt.com/qwerty',
@@ -221,6 +261,11 @@ describe('`is`', function () {
         'checks valid patreon url': {
             fn: 'patreon.url',
             checkThat: 'https://patreon.com/qwerty',
+            is: true
+        },
+        'checks valid patreon url with trailing slash': {
+            fn: 'patreon.url',
+            checkThat: 'https://patreon.com/qwerty/',
             is: true
         },
         'checks invalid patreon url': {
