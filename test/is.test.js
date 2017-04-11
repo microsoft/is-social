@@ -145,12 +145,12 @@ describe('`is`', function () {
         },
         'checks valid steam profile id': {
             fn: 'steam.profileUrl',
-            checkThat: 'https://steamcommunity.com/profiles/1234567890123456',
+            checkThat: 'https://steamcommunity.com/profiles/12345678901234567',
             is: true
         },
         'checks valid steam profile id with trailing slash': {
             fn: 'steam.profileUrl',
-            checkThat: 'https://steamcommunity.com/profiles/1234567890123456/',
+            checkThat: 'https://steamcommunity.com/profiles/12345678901234567/',
             is: true
         },
         'checks invalid steam profile id': {
