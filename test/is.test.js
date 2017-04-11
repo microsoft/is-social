@@ -145,32 +145,32 @@ describe('`is`', function () {
         },
         'checks valid steam profile id': {
             fn: 'steam.profileUrl',
-            checkThat: 'https://steamcommunity.com/profiles/12345678901234567',
+            checkThat: 'http://steamcommunity.com/profiles/12345678901234567',
             is: true
         },
         'checks valid steam profile id with trailing slash': {
             fn: 'steam.profileUrl',
-            checkThat: 'https://steamcommunity.com/profiles/12345678901234567/',
+            checkThat: 'http://steamcommunity.com/profiles/12345678901234567/',
             is: true
         },
         'checks invalid steam profile id': {
             fn: 'steam.profileUrl',
-            checkThat: 'https://steamcommunity.com/profiles/abcdefgh123',
+            checkThat: 'http://steamcommunity.com/profiles/abcdefgh123',
             is: false
         },
         'checks valid steam name': {
             fn: 'steam.customUrl',
-            checkThat: 'https://steamcommunity.com/id/abcdefgh123',
+            checkThat: 'http://steamcommunity.com/id/abcdefgh123',
             is: true
         },
         'checks valid steam name with trailing slash': {
             fn: 'steam.customUrl',
-            checkThat: 'https://steamcommunity.com/id/abcdefgh123/',
+            checkThat: 'http://steamcommunity.com/id/abcdefgh123/',
             is: true
         },
         'checks invalid steam name': {
             fn: 'steam.customUrl',
-            checkThat: 'https://steamcommunity.com/id/',
+            checkThat: 'http://steamcommunity.com/id/',
             is: false
         },
         'checks valid instagram name': {
