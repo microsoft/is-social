@@ -263,6 +263,11 @@ describe('`is`', function () {
             checkThat: 'https://spreadshirt.com/user/qwerty',
             is: true
         },
+        'checks valid spreadshirt shop url': {
+            fn: 'spreadshirt.shop',
+            checkThat: 'https://shop.spreadshirt.com/qwerty',
+            is: true
+        },
         'checks valid spreadshirt url with trailing slash': {
             fn: 'spreadshirt.url',
             checkThat: 'https://spreadshirt.com/user/qwerty/',
@@ -270,6 +275,11 @@ describe('`is`', function () {
         },
         'checks invalid spreadshirt url': {
             fn: 'spreadshirt.url',
+            checkThat: 'https://spreadshirt.com/qwerty',
+            is: false
+        },
+        'checks invalid spreadshirt shop url': {
+            fn: 'spreadshirt.shop',
             checkThat: 'https://spreadshirt.com/qwerty',
             is: false
         },
