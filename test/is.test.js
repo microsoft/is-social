@@ -63,6 +63,11 @@ describe('`is`', function () {
             checkThat: 'https://facebook.com/connor.peet',
             is: true
         },
+        'checks valid facebook url with dashes': {
+            fn: 'facebook.profile',
+            checkThat: 'https://facebook.com/connor-peet-association',
+            is: true
+        },
         'checks valid facebook url with trailing slash': {
             fn: 'facebook.profile',
             checkThat: 'https://facebook.com/connor.peet/',
@@ -88,6 +93,11 @@ describe('`is`', function () {
             checkThat: 'https://player.me/connor',
             is: true
         },
+        'checks valid player url with underscore': {
+            fn: 'player.url',
+            checkThat: 'https://player.me/connor_peet',
+            is: true
+        },
         'checks valid player url with trailing slash': {
             fn: 'player.url',
             checkThat: 'https://player.me/connor/',
@@ -101,6 +111,11 @@ describe('`is`', function () {
         'checks valid youtube name': {
             fn: 'youtube.name',
             checkThat: 'qwerty',
+            is: true
+        },
+        'checks valid youtube name with punctuation': {
+            fn: 'youtube.name',
+            checkThat: 'q-w-e-r-t-y_',
             is: true
         },
         'checks invalid youtube name': {
@@ -178,14 +193,24 @@ describe('`is`', function () {
             checkThat: 'qwerty',
             is: true
         },
+        'checks valid instagram name with punctuation': {
+            fn: 'instagram.name',
+            checkThat: 'q-w-e-r-t.y_',
+            is: true
+        },
         'checks invalid instagram name': {
             fn: 'instagram.name',
-            checkThat: 'qwert.y',
+            checkThat: 'qwert.y~',
             is: false
         },
         'checks valid instagram url': {
             fn: 'instagram.url',
             checkThat: 'https://instagram.com/qwerty',
+            is: true
+        },
+        'checks valid instagram url with punctuation': {
+            fn: 'instagram.url',
+            checkThat: 'https://instagram.com/qwert.y_',
             is: true
         },
         'checks valid instagram url with trailing slash': {
@@ -195,7 +220,7 @@ describe('`is`', function () {
         },
         'checks invalid instagram url': {
             fn: 'instagram.url',
-            checkThat: 'https://instagram.com/qwert.y',
+            checkThat: 'https://instagram.co/qwerty',
             is: false
         },
         'checks valid soundcloud name': {
