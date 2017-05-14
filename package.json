@@ -3,12 +3,13 @@
   "version": "1.0.8",
   "description": "Validators for social media profiles.",
   "main": "index.js",
+  "typings": "typings.d.ts",
   "scripts": {
-    "test": "npm run lint && node node_modules/mocha/bin/mocha test --recursive",
-    "lint": "node node_modules/eslint/bin/eslint.js lib",
+    "test": "npm run lint && mocha test --recursive",
+    "lint": "eslint lib test",
     "doc": "jsdoc lib -r -p -P package.json -d doc",
-    "cover": "node node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha -- test --recursive",
-    "travis": "node node_modules/istanbul/lib/cli cover node_modules/mocha/bin/_mocha --report lcovonly -- test --recursive"
+    "cover": "istanbul cover _mocha -- test --recursive",
+    "travis": "istanbul cover _mocha --report lcovonly -- test --recursive"
   },
   "repository": {
     "type": "git",
@@ -26,10 +27,10 @@
   },
   "homepage": "https://github.com/WatchBeam/is-social",
   "devDependencies": {
-    "chai": "^2.3.0",
+    "chai": "^3.5.0",
     "eslint": "^0.20.0",
-    "istanbul": "^0.3.13",
-    "mocha": "^2.2.4",
-    "sinon": "^1.14.1"
+    "istanbul": "^0.4.5",
+    "mocha": "^3.3.0",
+    "sinon": "^2.2.0"
   }
 }
