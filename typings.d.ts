@@ -1,6 +1,6 @@
 interface ITesters {
     twitter: {
-        handle (str: string): boolean;
+        handle (str: string, options?: { at?: boolean }): boolean;
         profile (str: string): boolean;
     }
     player: {
