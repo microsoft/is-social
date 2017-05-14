@@ -1,5 +1,7 @@
 var expect = require('chai').expect;
 
+/* eslint-env mocha */
+
 describe('`is`', function () {
     var is = require('../').is;
     var test = {
@@ -158,7 +160,7 @@ describe('`is`', function () {
             checkThat: 'x',
             is: false
         },
-        'checks valid steam profile id': {
+        'checks valid steam profile url': {
             fn: 'steam.profileUrl',
             checkThat: 'http://steamcommunity.com/profiles/12345678901234567',
             is: true
@@ -168,7 +170,7 @@ describe('`is`', function () {
             checkThat: 'http://steamcommunity.com/profiles/12345678901234567/',
             is: true
         },
-        'checks invalid steam profile id': {
+        'checks invalid steam profile url': {
             fn: 'steam.profileUrl',
             checkThat: 'http://steamcommunity.com/profiles/abcdefgh123',
             is: false
@@ -307,7 +309,7 @@ describe('`is`', function () {
             fn: 'patreon.url',
             checkThat: 'https://patreon.come/qwerty',
             is: false
-        },
+        }
     };
 
     Object.keys(test).forEach(function (t) {
