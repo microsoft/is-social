@@ -1,6 +1,6 @@
 {
   "name": "is-social",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "Validators for social media profiles.",
   "main": "index.js",
   "typings": "typings.d.ts",
