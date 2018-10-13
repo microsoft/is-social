@@ -10,7 +10,6 @@ describe('`is`', function () {
             checkThat: undefined,
             is: false
         },
-
         'checks valid twitter handle without @ sign': {
             fn: 'twitter.handle',
             checkThat: 'ConnorPeet',
@@ -48,6 +47,22 @@ describe('`is`', function () {
             fn: 'twitter.handle',
             checkThat: 'ConnorPeet',
             using: { at: true },
+            is: false
+        },
+        'rejects twitter search url as handle': {
+            fn: 'twitter.handle',
+            checkThat: 'https://twitter.com/search',
+            using: { at: false },
+            is: false
+        },
+        'accepts mobile twitter url as profile': {
+            fn: 'twitter.profile',
+            checkThat: 'https://mobile.twitter.com/ConnorPeet',
+            is: true
+        },
+        'rejects twitter search url as profile': {
+            fn: 'twitter.profile',
+            checkThat: 'https://twitter.com/search',
             is: false
         },
         'checks valid facebook name': {
