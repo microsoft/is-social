@@ -42,3 +42,6 @@ is.twitter.handle('@ConnorPeet'); // => true
     * [patreon](https://patreon.com)
       * name (patreon profile name)
       * url (patreon url)
+    * [twitch](https://twitch.tv)
+      * name (twitch channel name)
+      * url (twitch url)

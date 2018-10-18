@@ -38,6 +38,10 @@ interface ITesters {
         name (str: string): boolean;
         url (str: string): boolean;
     }
+    twitch: {
+        name (str: string): boolean;
+        url (str: string): boolean;
+    }
 }
 
 export const is: ITesters;
