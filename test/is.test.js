@@ -324,6 +324,31 @@ describe('`is`', function () {
             fn: 'patreon.url',
             checkThat: 'https://patreon.come/qwerty',
             is: false
+        },
+        'checks valid twitch name': {
+            fn: 'twitch.name',
+            checkThat: 'qwerty',
+            is: true
+        },
+        'checks invalid twitch name': {
+            fn: 'twitch.name',
+            checkThat: 'qwert.y',
+            is: false
+        },
+        'checks valid twitch url': {
+            fn: 'twitch.url',
+            checkThat: 'https://twitch.tv/qwerty',
+            is: true
+        },
+        'checks valid twitch url with trailing slash': {
+            fn: 'twitch.url',
+            checkThat: 'https://twitch.tv/qwerty/',
+            is: true
+        },
+        'checks invalid twitch url': {
+            fn: 'twitch.url',
+            checkThat: 'https://twitch.ttv/qwerty',
+            is: false
         }
     };
 
