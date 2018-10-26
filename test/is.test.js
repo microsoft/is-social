@@ -349,6 +349,88 @@ describe('`is`', function () {
             fn: 'twitch.url',
             checkThat: 'https://twitch.ttv/qwerty',
             is: false
+        },
+        'checks valid Medium handle': {
+            fn: 'medium.handle',
+            checkThat: '@davidebest',
+            is: true
+        },
+        'checks valid (without @) Medium handle': {
+            fn: 'medium.handle',
+            checkThat: 'davidebest',
+            is: true
+        },
+        'checks valid (without @, expecting @) Medium handle': {
+            fn: 'medium.handle',
+            checkThat: 'davidebest',
+            is: false,
+            using: { at: true}
+        },
+        'checks valid (with @, expecting no @) Medium handle': {
+            fn: 'medium.handle',
+            checkThat: '@davidebest',
+            is: false,
+            using: { at: false}
+        },
+        'checks invalid (too long) Medium handle': {
+            fn: 'medium.handle',
+            checkThat: 'abcdefghijklmnopqrstuvwxyz._.hi',
+            is: false
+        },
+        'checks invalid (bad chars) Medium handle': {
+            fn: 'medium.handle',
+            checkThat: '#;drop@@tables;%',
+            is: false
+        },
+        'checks invalid (non ascii) Medium handle': {
+            fn: 'medium.handle',
+            checkThat: 'ßÍll_gÅtes',
+            is: false
+        },
+        'checks invalid (spaces) Medium handle': {
+            fn: 'medium.handle',
+            checkThat: '@bill gates',
+            is: false
+        },
+        'checks invalid (empty with @) Medium handle': {
+            fn: 'medium.handle',
+            checkThat: '@',
+            is: false
+        },
+        'checks invalid (empty without @) Medium handle': {
+            fn: 'medium.handle',
+            checkThat: '',
+            is: false
+        },
+        'checks valid Medium url': {
+            fn: 'medium.profile',
+            checkThat: 'https://medium.com/@cdixon',
+            is: true
+        },
+        'checks invalid (no @) Medium url': {
+            fn: 'medium.profile',
+            checkThat: 'https://medium.com/cdixon',
+            is: false
+        },
+        'checks invalid (bad handle) Medium url': {
+            fn: 'medium.profile',
+            checkThat: 'https://medium.com/@ßÍll_gÅtes',
+            is: false
+        },
+        'checks invalid (empty handle) Medium url': {
+            fn: 'medium.profile',
+            checkThat: 'https://medium.com/',
+            is: false
+        },
+        'checks invalid (empty handle with @) Medium url': {
+            fn: 'medium.profile',
+            checkThat: 'https://medium.com/@',
+            is: false
+        },
+        'checks invalid (misspelled url) Medium url': {
+            fn: 'medium.profile',
+            checkThat: 'https://meddium.com/@cdixon',
+            is: false
         }
     };
 
