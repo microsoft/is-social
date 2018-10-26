@@ -45,3 +45,6 @@ is.twitter.handle('@ConnorPeet'); // => true
     * [twitch](https://twitch.tv)
       * name (twitch channel name)
       * url (twitch url)
+    * [medium](https://medium.com)
+      * profile (medium profile URL)
+      * handle (medium handle). Takes an option `at`, which is `true` to require the "@" symbol, `false` to disallow it, and undefined to not care either way. Defaults to undefined.
