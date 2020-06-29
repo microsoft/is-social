@@ -170,6 +170,26 @@ describe('`is`', function () {
             checkThat: 'https://youtube.com/user/qwerty/',
             is: true
         },
+        'checks valid youtube short url': {
+            fn: 'youtube.url',
+            checkThat: 'https://youtube.com/u/qwerty/',
+            is: true
+        },
+        'checks valid youtube short url with trailing slash': {
+            fn: 'youtube.url',
+            checkThat: 'https://youtube.com/u/qwerty/',
+            is: true
+        },
+        'checks valid youtube channel short url': {
+            fn: 'youtube.url',
+            checkThat: 'https://youtube.com/c/qwerty/',
+            is: true
+        },
+        'checks valid youtube channel short url with trailing slash': {
+            fn: 'youtube.url',
+            checkThat: 'https://youtube.com/c/qwerty/',
+            is: true
+        },
         'checks invalid youtube url': {
             fn: 'youtube.url',
             checkThat: 'https://youtube.come/qwerty',
