@@ -10,6 +10,7 @@ interface ITesters {
     facebook: {
         name (str: string): boolean;
         profile (str: string): boolean;
+        gaming (str: string): boolean;
     }
     youtube: {
         name (str: string): boolean;
@@ -39,6 +40,10 @@ interface ITesters {
         url (str: string): boolean;
     }
     twitch: {
+        name (str: string): boolean;
+        url (str: string): boolean;
+    }
+    dlive: {
         name (str: string): boolean;
         url (str: string): boolean;
     }
