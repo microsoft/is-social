@@ -390,6 +390,36 @@ describe('`is`', function () {
             checkThat: 'https://twitch.ttv/qwerty',
             is: false
         },
+        'checks valid dlive name': {
+            fn: 'dlive.name',
+            checkThat: 'qwerty',
+            is: true
+        },
+        'checks invalid dlive name': {
+            fn: 'dlive.name',
+            checkThat: 'qwert^y',
+            is: false
+        },
+        'checks invalid dlive name': {
+            fn: 'dlive.name',
+            checkThat: 'qwerty_',
+            is: false
+        },
+        'checks valid dlive url': {
+            fn: 'dlive.url',
+            checkThat: 'https://dlive.tv/qwerty',
+            is: true
+        },
+        'checks valid dlive url with trailing slash': {
+            fn: 'dlive.url',
+            checkThat: 'https://dlive.tv/qwerty/',
+            is: true
+        },
+        'checks invalid dlive url': {
+            fn: 'dlive.url',
+            checkThat: 'https://dlive.ttv/qwerty',
+            is: false
+        },
         'checks valid Medium handle': {
             fn: 'medium.handle',
             checkThat: '@davidebest',
