@@ -80,6 +80,26 @@ describe('`is`', function () {
             checkThat: 'https://facebook.com/connor.peet',
             is: true
         },
+        'checks valid facebook gaming url': {
+            fn: 'facebook.gaming',
+            checkThat: 'https://facebook.com/gaming/ConnorPeet',
+            is: true
+        },
+        'checks valid fb.gg url': {
+            fn: 'facebook.gaming',
+            checkThat: 'https://fb.gg/ConnorPeet',
+            is: true
+        },
+        'checks valid facebook gaming url with trailing slash': {
+            fn: 'facebook.gaming',
+            checkThat: 'https://facebook.com/gaming/ConnorPeet/',
+            is: true
+        },
+        'checks valid fb.gg url with trailing slash': {
+            fn: 'facebook.gaming',
+            checkThat: 'https://fb.gg/ConnorPeet/',
+            is: true
+        },
         'checks valid facebook url with dashes': {
             fn: 'facebook.profile',
             checkThat: 'https://facebook.com/connor-peet-association',
@@ -148,6 +168,26 @@ describe('`is`', function () {
         'checks valid youtube url with trailing slash': {
             fn: 'youtube.url',
             checkThat: 'https://youtube.com/user/qwerty/',
+            is: true
+        },
+        'checks valid youtube short url': {
+            fn: 'youtube.url',
+            checkThat: 'https://youtube.com/u/qwerty/',
+            is: true
+        },
+        'checks valid youtube short url with trailing slash': {
+            fn: 'youtube.url',
+            checkThat: 'https://youtube.com/u/qwerty/',
+            is: true
+        },
+        'checks valid youtube channel short url': {
+            fn: 'youtube.url',
+            checkThat: 'https://youtube.com/c/qwerty/',
+            is: true
+        },
+        'checks valid youtube channel short url with trailing slash': {
+            fn: 'youtube.url',
+            checkThat: 'https://youtube.com/c/qwerty/',
             is: true
         },
         'checks invalid youtube url': {
@@ -348,6 +388,36 @@ describe('`is`', function () {
         'checks invalid twitch url': {
             fn: 'twitch.url',
             checkThat: 'https://twitch.ttv/qwerty',
+            is: false
+        },
+        'checks valid dlive name': {
+            fn: 'dlive.name',
+            checkThat: 'qwerty',
+            is: true
+        },
+        'checks invalid dlive name': {
+            fn: 'dlive.name',
+            checkThat: 'qwert^y',
+            is: false
+        },
+        'checks invalid dlive name': {
+            fn: 'dlive.name',
+            checkThat: 'qwerty_',
+            is: false
+        },
+        'checks valid dlive url': {
+            fn: 'dlive.url',
+            checkThat: 'https://dlive.tv/qwerty',
+            is: true
+        },
+        'checks valid dlive url with trailing slash': {
+            fn: 'dlive.url',
+            checkThat: 'https://dlive.tv/qwerty/',
+            is: true
+        },
+        'checks invalid dlive url': {
+            fn: 'dlive.url',
+            checkThat: 'https://dlive.ttv/qwerty',
             is: false
         },
         'checks valid Medium handle': {
