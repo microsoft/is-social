@@ -80,6 +80,26 @@ describe('`is`', function () {
             checkThat: 'https://facebook.com/connor.peet',
             is: true
         },
+        'checks valid facebook gaming url': {
+            fn: 'facebook.gaming',
+            checkThat: 'https://facebook.com/gaming/ConnorPeet',
+            is: true
+        },
+        'checks valid fb.gg url': {
+            fn: 'facebook.gaming',
+            checkThat: 'https://fb.gg/ConnorPeet',
+            is: true
+        },
+        'checks valid facebook gaming url with trailing slash': {
+            fn: 'facebook.gaming',
+            checkThat: 'https://facebook.com/gaming/ConnorPeet/',
+            is: true
+        },
+        'checks valid fb.gg url with trailing slash': {
+            fn: 'facebook.gaming',
+            checkThat: 'https://fb.gg/ConnorPeet/',
+            is: true
+        },
         'checks valid facebook url with dashes': {
             fn: 'facebook.profile',
             checkThat: 'https://facebook.com/connor-peet-association',
